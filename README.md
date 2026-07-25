@@ -82,6 +82,6 @@ Voir le dossier [`documentation/`](./docs) :
 
 ## Voir Executable et Installeur
 
-Voir le dossier ['Exécutable.exe'](./docs)
+Voir le dossier ['Exécutable.exe/'](./docs)
 
-Voir le dossier ['Installeur.exe'](./docs)
+Voir le dossier ['Installeur.exe/'](./docs)
