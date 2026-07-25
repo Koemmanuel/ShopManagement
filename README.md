@@ -74,8 +74,14 @@ mvn javafx:run
 
 ## Documentation
 
-Voir le dossier [`docs/`](./docs) :
+Voir le dossier [`documentation/`](./docs) :
 - Cahier des charges (v1.0)
 - Diagramme de cas d'utilisation UML
 - Diagramme de classes UML
 - Support de soutenance
+
+## Voir Executable et Installeur
+
+Voir le dossier ['Exécutable.exe'](./docs)
+
+Voir le dossier ['Installeur.exe'](./docs)
