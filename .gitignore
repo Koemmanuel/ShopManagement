@@ -56,7 +56,6 @@ db.properties
 # ==============================
 # Base de données locales (SQLite, dumps, etc.)
 # ==============================
-*.db
 *.sqlite
 *.sql.bak
 
