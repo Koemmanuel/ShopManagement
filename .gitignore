@@ -6,14 +6,6 @@
 *.war
 *.ear
 
-# =============================
-# Dossiers compilés et générés
-# =============================
-GestionBoutique/
-Gestion_Boutique/
-target/
-*.exe
-*.db
 
 # ==============================
 # Dossiers de build
