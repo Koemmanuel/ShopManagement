@@ -94,9 +94,9 @@ mvn clean javafx:run
      |  |  │   └── images/                  # Logo et icônes
      |  |  └── pom.xml
      |  |
-     |  ├── database/                    # Fichier boutique.db (SQLite)
-     |  ├── GestionBoutique/
-     |  ├── installeur/                  # Installeur Windows (Inno Setup)     # Image d'application générée par jpackage
+     |  ├── database/                        # Fichier boutique.db (SQLite)
+     |  ├── GestionBoutique_Executable/     # Exécutable de l'application        
+     |  ├── installeur/                     # Installeur Windows (Inno Setup)     # Image d'application générée par jpackage
         └──README.md   
 ```
 
