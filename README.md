@@ -72,6 +72,11 @@ cd gestionboutique
 mvn clean javafx:run
 ```
 
+## 👥 Équipe
+
+- **KPELOU Presam**
+- **SEGNEDJI Komivi Emmanuel**
+
 ## Structure du projet
 
 ```  ├──ShopManagement
