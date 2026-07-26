@@ -111,6 +111,11 @@ Au premier lancement, un compte administrateur est créé automatiquement :
 
 ⚠️ Il est recommandé de changer ce mot de passe après la première connexion (menu Utilisateurs).
 
+## 👥 Équipe
+
+- **KPELOU Presam**
+- **SEGNEDJI Komivi Emmanuel**
+
 ## Documentation complète
 
 Voir le fichier **[GUIDE_INSTALLATION_UTILISATION.md](GUIDE_INSTALLATION_UTILISATION.md)** pour :
