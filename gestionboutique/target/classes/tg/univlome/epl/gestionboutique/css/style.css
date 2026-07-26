@@ -1,0 +1,272 @@
+/* ========================================================
+   GESTION BOUTIQUE - Feuille de style moderne
+   Palette: bleu nuit / vert émeraude / blanc cassé
+   ======================================================== */
+
+* {
+    -fx-primary: #1E293B;         /* bleu nuit (sidebar) */
+    -fx-primary-dark: #0F172A;
+    -fx-accent: #10B981;          /* vert émeraude (actions) */
+    -fx-accent-dark: #059669;
+    -fx-danger: #EF4444;
+    -fx-warning: #F59E0B;
+    -fx-bg: #F1F5F9;              /* fond général */
+    -fx-card: #FFFFFF;
+    -fx-text-main: #1E293B;
+    -fx-text-muted: #64748B;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.root {
+    -fx-background-color: -fx-bg;
+    -fx-font-family: -fx-font-family;
+}
+
+/* ================= LOGIN ================= */
+.login-pane {
+    -fx-background-color: linear-gradient(to bottom right, #0F172A, #1E293B, #10B981);
+}
+
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 30, 0.2, 0, 10);
+    -fx-padding: 40;
+}
+
+.login-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary;
+}
+
+.login-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: -fx-text-muted;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    -fx-background-color: -fx-primary;
+    -fx-pref-width: 230;
+    -fx-padding: 0;
+}
+
+.sidebar-logo {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 25 20 25 20;
+}
+
+.sidebar-logo .sub {
+    -fx-font-size: 11px;
+    -fx-text-fill: -fx-accent;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 13.5px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 14 20 14 24;
+    -fx-pref-width: 230;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+    -fx-border-width: 0 0 0 4;
+    -fx-border-color: transparent;
+}
+
+.nav-button:hover {
+    -fx-background-color: #273549;
+    -fx-text-fill: white;
+}
+
+.nav-button-active {
+    -fx-background-color: #273549;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: -fx-accent;
+}
+
+.user-badge {
+    -fx-background-color: #273549;
+    -fx-background-radius: 10;
+    -fx-padding: 12;
+}
+
+.user-badge .name {
+    -fx-text-fill: white;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+}
+
+.user-badge .role {
+    -fx-text-fill: -fx-accent;
+    -fx-font-size: 10.5px;
+}
+
+/* ================= TOPBAR ================= */
+.topbar {
+    -fx-background-color: -fx-card;
+    -fx-padding: 16 30;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 6, 0, 0, 2);
+}
+
+.topbar-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-main;
+}
+
+/* ================= CARDS (stat cards dashboard) ================= */
+.stat-card {
+    -fx-background-color: -fx-card;
+    -fx-background-radius: 14;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 12, 0, 0, 4);
+}
+
+.stat-card .icon-circle {
+    -fx-background-radius: 50;
+    -fx-min-width: 46; -fx-min-height: 46;
+    -fx-max-width: 46; -fx-max-height: 46;
+    -fx-alignment: CENTER;
+}
+
+.stat-card .value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-main;
+}
+
+.stat-card .label {
+    -fx-font-size: 12px;
+    -fx-text-fill: -fx-text-muted;
+}
+
+.bg-emerald { -fx-background-color: rgba(16,185,129,0.15); }
+.bg-blue    { -fx-background-color: rgba(59,130,246,0.15); }
+.bg-amber   { -fx-background-color: rgba(245,158,11,0.15); }
+.bg-red     { -fx-background-color: rgba(239,68,68,0.15); }
+
+/* ================= CONTENT CARD ================= */
+.content-card {
+    -fx-background-color: -fx-card;
+    -fx-background-radius: 14;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 3);
+}
+
+.section-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-main;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 22;
+    -fx-cursor: hand;
+}
+.btn-primary:hover { -fx-background-color: -fx-accent-dark; }
+
+.btn-secondary {
+    -fx-background-color: #E2E8F0;
+    -fx-text-fill: -fx-text-main;
+    -fx-background-radius: 8;
+    -fx-padding: 10 22;
+    -fx-cursor: hand;
+}
+.btn-secondary:hover { -fx-background-color: #CBD5E1; }
+
+.btn-danger {
+    -fx-background-color: -fx-danger;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.btn-danger:hover { -fx-background-color: #DC2626; }
+
+/* ================= FORM FIELDS ================= */
+.text-field, .password-field, .combo-box, .text-area, .date-picker {
+    -fx-background-color: #F8FAFC;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #E2E8F0;
+    -fx-padding: 9 12;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .password-field:focused, .combo-box:focused {
+    -fx-border-color: -fx-accent;
+}
+
+/* ================= TABLE ================= */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #F8FAFC;
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #E2E8F0 transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-weight: bold;
+    -fx-font-size: 11.5px;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #F1F5F9 transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #ECFDF5;
+    -fx-text-fill: -fx-text-main;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #F8FAFC;
+}
+
+/* Tag pour stock faible */
+.tag-danger {
+    -fx-background-color: rgba(239,68,68,0.15);
+    -fx-text-fill: #DC2626;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 3 10;
+}
+
+.tag-success {
+    -fx-background-color: rgba(16,185,129,0.15);
+    -fx-text-fill: #059669;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 3 10;
+}
+
+/* Scrollbar discret */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #CBD5E1;
+    -fx-background-radius: 10;
+}

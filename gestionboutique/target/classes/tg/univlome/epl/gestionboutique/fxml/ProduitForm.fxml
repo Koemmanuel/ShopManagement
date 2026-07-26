@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="14" style="-fx-padding: 25; -fx-background-color: white;" prefWidth="380"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="tg.univlome.epl.gestionboutique.controller.ProduitFormController">
+
+    <Label fx:id="lblTitre" text="Nouveau produit" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1E293B;"/>
+
+    <VBox spacing="5">
+        <Label text="Nom du produit *" style="-fx-font-size: 12px; -fx-text-fill: #64748B;"/>
+        <TextField fx:id="txtNom" promptText="Ex: Riz 25kg"/>
+    </VBox>
+
+    <VBox spacing="5">
+        <Label text="Catégorie" style="-fx-font-size: 12px; -fx-text-fill: #64748B;"/>
+        <ComboBox fx:id="cmbCategorie" editable="true" prefWidth="330"
+                  promptText="Ex: Alimentation, Boisson, Hygiène..."/>
+    </VBox>
+
+    <HBox spacing="14">
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Prix d'achat (FCFA)" style="-fx-font-size: 12px; -fx-text-fill: #64748B;"/>
+            <TextField fx:id="txtPrixAchat" promptText="0"/>
+        </VBox>
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Prix de vente (FCFA) *" style="-fx-font-size: 12px; -fx-text-fill: #64748B;"/>
+            <TextField fx:id="txtPrixVente" promptText="0"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="14">
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Quantité en stock *" style="-fx-font-size: 12px; -fx-text-fill: #64748B;"/>
+            <TextField fx:id="txtQuantite" promptText="0"/>
+        </VBox>
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Seuil d'alerte" style="-fx-font-size: 12px; -fx-text-fill: #64748B;"/>
+            <TextField fx:id="txtSeuil" promptText="5"/>
+        </VBox>
+    </HBox>
+
+    <Label fx:id="lblErreur" style="-fx-text-fill: #EF4444; -fx-font-size: 12px;" wrapText="true"/>
+
+    <HBox spacing="12" alignment="CENTER_RIGHT" style="-fx-padding: 10 0 0 0;">
+        <Button text="Annuler" styleClass="btn-secondary" onAction="#handleAnnuler"/>
+        <Button fx:id="btnEnregistrer" text="Enregistrer" styleClass="btn-primary" onAction="#handleEnregistrer"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="20" style="-fx-padding: 30;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="tg.univlome.epl.gestionboutique.controller.AlerteStockController">
+
+    <HBox alignment="CENTER_LEFT">
+        <VBox spacing="2">
+            <Label text="Alertes de stock" styleClass="topbar-title"/>
+            <Label text="Produits dont le stock est égal ou inférieur au seuil d'alerte" style="-fx-text-fill: #64748B; -fx-font-size: 12.5px;"/>
+        </VBox>
+    </HBox>
+
+    <HBox styleClass="stat-card" spacing="16" alignment="CENTER_LEFT">
+        <VBox styleClass="icon-circle, bg-red" alignment="CENTER">
+            <Label text="⚠️"/>
+        </VBox>
+        <VBox spacing="2">
+            <Label fx:id="lblNbAlertes" styleClass="value" text="0"/>
+            <Label text="produit(s) en stock faible" styleClass="label"/>
+        </VBox>
+    </HBox>
+
+    <VBox styleClass="content-card" VBox.vgrow="ALWAYS">
+        <TableView fx:id="tableStock" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colNom" text="Nom" prefWidth="220"/>
+                <TableColumn fx:id="colCategorie" text="Catégorie" prefWidth="150"/>
+                <TableColumn fx:id="colStock" text="Stock actuel" prefWidth="130"/>
+                <TableColumn fx:id="colSeuil" text="Seuil d'alerte" prefWidth="130"/>
+                <TableColumn fx:id="colStatut" text="Statut" prefWidth="130"/>
+            </columns>
+        </TableView>
+    </VBox>
+</VBox>
