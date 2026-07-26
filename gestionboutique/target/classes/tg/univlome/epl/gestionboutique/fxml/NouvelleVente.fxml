@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="20" style="-fx-padding: 30;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="tg.univlome.epl.gestionboutique.controller.NouvelleVenteController">
+
+    <VBox spacing="2">
+        <Label text="Nouvelle vente" styleClass="topbar-title"/>
+        <Label text="Sélectionnez les produits et enregistrez la vente" style="-fx-text-fill: #64748B; -fx-font-size: 12.5px;"/>
+    </VBox>
+
+    <HBox styleClass="content-card" spacing="14" alignment="CENTER_LEFT">
+        <ComboBox fx:id="cmbProduit" promptText="Choisir un produit" prefWidth="260"/>
+        <TextField fx:id="txtQuantite" promptText="Quantité" prefWidth="100"/>
+        <Button text="Ajouter à la vente" styleClass="btn-primary" onAction="#handleAjouterLigne"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="lblErreur" style="-fx-text-fill: #EF4444; -fx-font-size: 12px;"/>
+    </HBox>
+
+    <VBox styleClass="content-card" VBox.vgrow="ALWAYS" spacing="12">
+        <TableView fx:id="tableLignes" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colProduit" text="Produit" prefWidth="220"/>
+                <TableColumn fx:id="colQuantite" text="Quantité" prefWidth="100"/>
+                <TableColumn fx:id="colPrixUnitaire" text="Prix unitaire" prefWidth="130"/>
+                <TableColumn fx:id="colSousTotal" text="Sous-total" prefWidth="130"/>
+                <TableColumn fx:id="colAction" text="" prefWidth="90"/>
+            </columns>
+        </TableView>
+
+        <HBox alignment="CENTER_RIGHT" spacing="20" style="-fx-padding: 10 10 0 0;">
+            <Label text="TOTAL À PAYER :" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #64748B;"/>
+            <Label fx:id="lblTotal" text="0 FCFA" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #10B981;"/>
+        </HBox>
+    </VBox>
+
+    <HBox alignment="CENTER_RIGHT" spacing="14">
+        <Button text="Imprimer le reçu" styleClass="btn-secondary" onAction="#handleImprimerRecu" graphicTextGap="8">
+            <graphic><FontIcon iconLiteral="fth-printer" iconSize="14"/></graphic>
+        </Button>
+        <Button text="Annuler la vente" styleClass="btn-secondary" onAction="#handleAnnulerVente"/>
+        <Button text="✓ Valider la vente" styleClass="btn-primary" onAction="#handleValiderVente" style="-fx-font-size: 14px; -fx-padding: 12 26;"/>
+    </HBox>
+</VBox>
