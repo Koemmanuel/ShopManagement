@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<ScrollPane fitToWidth="true" style="-fx-background-color: transparent;"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="tg.univlome.epl.gestionboutique.controller.DashboardController">
+    <VBox spacing="20" style="-fx-padding: 30;">
+
+        <VBox spacing="2">
+            <Label text="Tableau de bord" styleClass="topbar-title"/>
+            <Label text="Vue d'ensemble de votre boutique en temps réel" style="-fx-text-fill: #64748B; -fx-font-size: 12.5px;"/>
+        </VBox>
+
+        <!-- ===== Cartes statistiques ===== -->
+        <HBox spacing="18">
+            <VBox styleClass="stat-card" spacing="10" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+                <StackPane styleClass="icon-circle, bg-emerald"><FontIcon iconLiteral="fth-dollar-sign" iconSize="20" iconColor="#059669"/></StackPane>
+                <Label fx:id="lblCAJournalier" styleClass="value" text="0 FCFA"/>
+                <Label text="Chiffre d'affaires du jour" styleClass="label"/>
+            </VBox>
+            <VBox styleClass="stat-card" spacing="10" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+                <StackPane styleClass="icon-circle, bg-blue"><FontIcon iconLiteral="fth-calendar" iconSize="20" iconColor="#2563EB"/></StackPane>
+                <Label fx:id="lblCAMensuel" styleClass="value" text="0 FCFA"/>
+                <Label text="Chiffre d'affaires du mois" styleClass="label"/>
+            </VBox>
+            <VBox styleClass="stat-card" spacing="10" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+                <StackPane styleClass="icon-circle, bg-amber"><FontIcon iconLiteral="fth-shopping-cart" iconSize="20" iconColor="#D97706"/></StackPane>
+                <Label fx:id="lblNbVentes" styleClass="value" text="0"/>
+                <Label text="Ventes aujourd'hui" styleClass="label"/>
+            </VBox>
+            <VBox styleClass="stat-card" spacing="10" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+                <StackPane styleClass="icon-circle, bg-red"><FontIcon iconLiteral="fth-alert-triangle" iconSize="20" iconColor="#DC2626"/></StackPane>
+                <Label fx:id="lblStockFaible" styleClass="value" text="0"/>
+                <Label text="Produits en stock faible" styleClass="label"/>
+            </VBox>
+        </HBox>
+
+        <!-- ===== Graphiques ===== -->
+        <HBox spacing="18">
+            <VBox styleClass="content-card" spacing="10" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+                <Label text="Évolution du chiffre d'affaires (7 derniers jours)" styleClass="section-title"/>
+                <LineChart fx:id="chartCA" prefHeight="260" legendVisible="false">
+                    <xAxis><CategoryAxis fx:id="axeJours"/></xAxis>
+                    <yAxis><NumberAxis fx:id="axeCA"/></yAxis>
+                </LineChart>
+            </VBox>
+            <VBox styleClass="content-card" spacing="10" prefWidth="380">
+                <Label text="Top 5 produits les plus vendus" styleClass="section-title"/>
+                <BarChart fx:id="chartTop" prefHeight="260" legendVisible="false">
+                    <xAxis><CategoryAxis fx:id="axeProduits"/></xAxis>
+                    <yAxis><NumberAxis fx:id="axeQuantite"/></yAxis>
+                </BarChart>
+            </VBox>
+        </HBox>
+
+    </VBox>
+</ScrollPane>
