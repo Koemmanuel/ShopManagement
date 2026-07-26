@@ -76,22 +76,23 @@ mvn clean javafx:run
 
 ```  ├──ShopManagement
      |  ├──gestionboutique/
-     |  ├── src/main/java/tg/univlome/epl/gestionboutique/
-     |  │   ├── App.java                 # Point d'entrée JavaFX
-     |  │   ├── Launcher.java            # Classe de lancement (jar exécutable)
-     |  │   ├── controller/              # Contrôleurs FXML
-     |  │   ├── dao/                     # Accès aux données (SQLite)
-     |  │   ├── model/                   # Modèles métier (Produit, Vente, Utilisateur...)
-     |  │   └── util/                    # DatabaseManager, Session
-     |  ├── src/main/resources/
-     |  │   ├── fxml/                    # Vues FXML
-     |  │   ├── css/                     # Feuilles de style
-     |  │   └── images/                  # Logo et icônes
+     |  |  ├── src/main/java/tg/univlome/epl/gestionboutique/
+     |  |  │   ├── App.java                 # Point d'entrée JavaFX
+     |  |  │   ├── Launcher.java            # Classe de lancement (jar exécutable)
+     |  |  │   ├── controller/              # Contrôleurs FXML
+     |  |  │   ├── dao/                     # Accès aux données (SQLite)
+     |  |  │   ├── model/                   # Modèles métier (Produit, Vente, Utilisateur...)
+     |  |  │   └── util/                    # DatabaseManager, Session
+     |  |  ├── src/main/resources/
+     |  |  │   ├── fxml/                    # Vues FXML
+     |  |  │   ├── css/                     # Feuilles de style
+     |  |  │   └── images/                  # Logo et icônes
+     |  |  └── pom.xml
+     |  |
      |  ├── database/                    # Fichier boutique.db (SQLite)
-     |  ├── GestionBoutique/              # Image d'application générée par jpackage
-     |  ├── installeur/                  # Installeur Windows (Inno Setup)
-     |  └── pom.xml
-     └──README.md   
+     |  ├── GestionBoutique/
+     |  ├── installeur/                  # Installeur Windows (Inno Setup)     # Image d'application générée par jpackage
+        └──README.md   
 ```
 
 ## Identifiants par défaut
